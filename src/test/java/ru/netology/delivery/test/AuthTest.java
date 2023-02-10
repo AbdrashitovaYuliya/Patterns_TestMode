@@ -1,10 +1,5 @@
 package ru.netology.delivery.test;
 
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.http.ContentType;
-import io.restassured.specification.RequestSpecification;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static io.restassured.RestAssured.given;
 import static ru.netology.delivery.data.DataGenerator.Registration.getRegisteredUser;
 import static ru.netology.delivery.data.DataGenerator.Registration.getUser;
 import static ru.netology.delivery.data.DataGenerator.getRandomLogin;
