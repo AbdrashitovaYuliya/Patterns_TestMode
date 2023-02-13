@@ -1,8 +1,10 @@
 package ru.netology.delivery.test;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.$;
@@ -15,6 +17,9 @@ import static ru.netology.delivery.data.DataGenerator.getRandomPassword;
 class AuthTest {
     @BeforeEach
     void setup() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        Configuration.browserCapabilities = options;
         open("http://localhost:9999");
     }
 
